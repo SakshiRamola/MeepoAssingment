@@ -1,0 +1,4 @@
+server:
+  port: 8087
+resource:
+  notes: http://timesheet-1172.appspot.com/d09204c4/notes

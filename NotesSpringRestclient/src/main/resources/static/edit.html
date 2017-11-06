@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Note</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+</head>
+<body>
+	<h1>Edit Note</h1>
+	<div class="nine columns">
+		<form th:object="${note}" th:action="@{../save}" action="#" th:method="PUT">
+			<input type="hidden" th:field="*{id}" th:value="${note.id}" class="form-control"/>
+			<input type="text" th:field="*{title}" class="form-control"
+				placeholder="Title" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="text" th:field="*{description}" class="form-control"
+				placeholder="Description" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>
